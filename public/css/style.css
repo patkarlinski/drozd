@@ -448,7 +448,7 @@ footer {
 @media (max-width: 420px) {
     .logo h1 {
         margin: 0;
-        font-size: 1.84rem;
+        font-size: 2rem;
     }
     .li-img img {
         margin: 0;
@@ -460,6 +460,13 @@ footer {
     .menu {
         height: 32px;
         width: 70px;
+    }
+}
+
+@media (max-width: 386px) {
+    .logo h1 {
+        margin: 0;
+        font-size: 1.55rem;
     }
 }
 
