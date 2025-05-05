@@ -474,8 +474,8 @@ footer {
     }
 }
 
-@media (orientation: landscape) {
-    .nav-deskopt {
+@media (orientation: landscape) and (max-width: 1000px) {
+    .nav-desktop {
         justify-content: center;
         height: 66vh;
         padding: 0;
