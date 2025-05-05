@@ -436,12 +436,11 @@ footer {
     .img--article {
         padding: 0 0.5rem;
     }
-    
 }
 
 @media (max-width: 630px) {
     .logo h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
         padding-left: 0px;
     }
 }
@@ -449,7 +448,7 @@ footer {
 @media (max-width: 420px) {
     .logo h1 {
         margin: 0;
-        font-size: 1.8rem;
+        font-size: 1.84rem;
     }
     .li-img img {
         margin: 0;
@@ -457,6 +456,10 @@ footer {
     .li-img img{
         width: 44px;
         height: 44px;
+    }
+    .menu {
+        height: 32px;
+        width: 70px;
     }
 }
 
