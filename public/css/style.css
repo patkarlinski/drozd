@@ -461,6 +461,10 @@ footer {
         height: 32px;
         width: 70px;
     }
+    .close {
+        height: 32px;
+        width: 70px;
+    }
 }
 
 @media (max-width: 386px) {
