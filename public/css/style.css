@@ -442,19 +442,28 @@ footer {
 @media (max-width: 630px) {
     .logo h1 {
         font-size: 1.8rem;
-        padding-left: 8px;
+        padding-left: 0px;
     }
 }
 
 @media (max-width: 420px) {
     .logo h1 {
         margin: 0;
-        font-size: 3rem;
+        font-size: 1.8rem;
     }
     .li-img img {
         margin: 0;
     }
-    .header--logo--name {
-        display: none;
+    .li-img img{
+        width: 44px;
+        height: 44px;
+    }
+}
+
+@media (orientation: landscape) {
+    .nav-deskopt {
+        justify-content: center;
+        height: 66vh;
+        padding: 0;
     }
 }
