@@ -139,7 +139,7 @@ section h3 {
 section h2 {
     font-size: 2rem;
 }
-section h4 {
+.header--call {
     font-size: 1.17em;
 }
 section p {
