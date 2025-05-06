@@ -4,8 +4,6 @@
     --font--headers--color:#002333;
     --article--color:#DEE0D5 ;
     --font-size: 1.3rem;
-    --mono: "Oxygen mono", monospace;
-    --sans: Oxygen, sans-serif;
 }
 html {
     box-sizing: border-box;
