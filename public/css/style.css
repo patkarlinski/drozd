@@ -96,11 +96,6 @@ nav a {
 .head--article img {
     border-radius: 40px;
 }
-#ceny {
-    text-align: center;
-    margin: 0 auto;
-    padding: 1.5rem 0 2rem 0;
-}
 article {
     padding: 1rem 3rem;
 }
@@ -234,6 +229,9 @@ footer {
     cursor: pointer;
 }
 
+.mail--icon {
+    padding-top: 16px;
+}
 
 
 @media (min-width: 850px) {

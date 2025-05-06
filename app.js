@@ -1,38 +1,26 @@
-const http = require('http');
-const fs = require('fs');
+const express = require('express');
 const path = require('path');
+const fs = require('fs');
 
-const port = 3000;
-const publicDir = path.join(__dirname, 'public');
+const app = express();
 
-const server = http.createServer((req, res) => {
-  let filePath = path.join(publicDir, req.url === '/' ? 'index.html' : req.url);
-  const extname = path.extname(filePath);
+app.use(express.static(path.join(__dirname, 'public')));
 
-  // Ustal MIME typ
-  const mimeTypes = {
-    '.html': 'text/html',
-    '.css':  'text/css',
-    '.js':   'text/javascript',
-    '.png':  'image/png',
-    '.jpg':  'image/jpeg',
-    '.ico':  'image/x-icon',
-  };
-
-  const contentType = mimeTypes[extname] || 'application/octet-stream';
-
-  // Odczytaj plik i wyślij odpowiedź
-  fs.readFile(filePath, (err, content) => {
-    if (err) {
-      res.writeHead(404, { 'Content-Type': 'text/plain' });
-      res.end('404 Not Found');
-    } else {
-      res.writeHead(200, { 'Content-Type': contentType });
-      res.end(content);
-    }
-  });
+app.get('/', (req, res) => {
+  res.sendFile('index.html', {root:__dirname});
 });
 
-server.listen(port, () => {
-  console.log(`Serwer działa na http://localhost:${port}`);
+
+
+app.get('/sitemap.xml', (req, res) => {
+  const filePath = path.join(__dirname, 'sitemap.xml');
+  res.sendFile(filePath);
+})
+
+app.use((req, res) => {
+  res.status(404).send('Not found')
+});
+
+app.listen(3000, () => {
+  console.log('Server start on 3000');
 });
