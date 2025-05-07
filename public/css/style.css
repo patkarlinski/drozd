@@ -229,7 +229,10 @@ footer {
 }
 
 .mail--icon {
-    padding-top: 16px;
+    padding-top: 12px;
+}
+.mail--icon path {
+    fill: var(--secondary--color)
 }
 
 
@@ -378,6 +381,12 @@ footer {
     }
     .logo {
         flex-grow: 2;
+    }
+    .contact-open-middle {
+        padding-top: 16px;
+    }
+    .mail--header {
+        padding-bottom: 0;
     }
 }
 
