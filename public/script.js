@@ -41,3 +41,17 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       }
     });
   });
+
+
+
+  document.querySelectorAll('.called').forEach(function (button) {
+    button.addEventListener('click', function (e) {
+      e.preventDefault(); 
+      gtag('event', 'conversion', {
+        send_to: 'AW-877625419/VDR4CImHtsMaEMuAvqID'
+      });
+      setTimeout(() => {
+        window.location.href = button.href;
+      }, 150);
+    });
+  });
